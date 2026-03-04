@@ -1,8 +1,0 @@
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; }
-    section { padding: 60px 5%; }
-    .gallery-grid img { height: 200px; }
-    .rsvp-form { padding: 20px; }
-}
