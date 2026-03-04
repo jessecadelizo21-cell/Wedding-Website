@@ -1,158 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Wedding | Jesseca & Joshua</title>
-  <style>
-    /* Dusty Blue Color Palette */
-    :root {
-      --dusty-blue: #8da9c4;
-      --slate-blue: #546a7b;
-      --off-white: #f8f9fa;
-      --soft-gray: #e9ecef;
-      --text-main: #444;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding | Jesseca & Joshua</title>
+    <style>
+        /* Dusty Blue Color Palette */
+        :root {
+            --dusty-blue: #8da9c4;
+            --slate-blue: #546a7b;
+            --off-white: #f8f9fa;
+            --soft-gray: #e9ecef;
+            --text-main: #444;
+        }
 
-    * { box-sizing: border-box; }
-    body { 
-      font-family: 'Times New Roman', Times, serif; 
-      margin: 0; 
-      background: var(--off-white); 
-      color: var(--text-main); 
-      scroll-behavior: smooth; 
-    }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Times New Roman', Times, serif; 
+            margin: 0; 
+            background: var(--off-white); 
+            color: var(--text-main); 
+            scroll-behavior: smooth; 
+        }
 
-    header { 
-      height: 100vh; 
-      background: linear-gradient(rgba(141, 169, 196, 0.4), rgba(141, 169, 196, 0.4)), 
-                  url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; 
-      color: white; text-align: center; border-bottom: 8px solid var(--dusty-blue);
-    }
+        /* Hero Image - Placeholder is a soft blue landscape */
+        header { 
+            height: 100vh; 
+            background: linear-gradient(rgba(141, 169, 196, 0.4), rgba(141, 169, 196, 0.4)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            color: white; text-align: center; border-bottom: 8px solid var(--dusty-blue);
+        }
 
-    h1 { font-size: 4.5rem; margin: 10px 0; font-weight: normal; text-shadow: 1px 1px 10px rgba(0,0,0,0.2); }
-    .hero-sub { letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem; }
+        h1 { font-size: 4.5rem; margin: 10px 0; font-weight: normal; text-shadow: 1px 1px 10px rgba(0,0,0,0.2); }
+        .hero-sub { letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem; }
 
-    #countdown { 
-      font-family: Arial, sans-serif;
-      font-size: 1.2rem; 
-      background: rgba(255,255,255,0.9); 
-      color: var(--slate-blue);
-      padding: 15px 40px; 
-      border-radius: 2px; 
-      margin-top: 30px; 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+        /* Countdown */
+        #countdown { 
+            font-family: Arial, sans-serif;
+            font-size: 1.2rem; 
+            background: rgba(255,255,255,0.9); 
+            color: var(--slate-blue);
+            padding: 15px 40px; 
+            border-radius: 2px; 
+            margin-top: 30px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
 
-    section { padding: 100px 10%; text-align: center; }
-    h2 { font-size: 2.8rem; color: var(--slate-blue); margin-bottom: 30px; font-weight: normal; }
+        section { padding: 100px 10%; text-align: center; }
+        h2 { font-size: 2.8rem; color: var(--slate-blue); margin-bottom: 30px; font-weight: normal; }
 
-    #story { background-color: white; border-bottom: 1px solid var(--soft-gray); }
-    .story-text { max-width: 650px; margin: auto; line-height: 1.8; font-size: 1.1rem; }
+        /* Story Section */
+        #story { background-color: white; border-bottom: 1px solid var(--soft-gray); }
+        .story-text { max-width: 650px; margin: auto; line-height: 1.8; font-size: 1.1rem; }
 
-    .video-wrapper { 
-      max-width: 850px; margin: 40px auto; 
-      border: 15px solid white; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
-    }
-    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        /* Video Section */
+        .video-wrapper { 
+            max-width: 850px; margin: 40px auto; 
+            border: 15px solid white; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+        }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-    .gallery-grid img { 
-      width: 100%; height: 300px; object-fit: cover; 
-      filter: grayscale(20%); transition: 0.5s; 
-      border: 5px solid white;
-    }
-    .gallery-grid img:hover { filter: grayscale(0%); transform: translateY(-5px); }
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-grid img { 
+            width: 100%; height: 300px; object-fit: cover; 
+            filter: grayscale(20%); transition: 0.5s; 
+            border: 5px solid white;
+        }
+        .gallery-grid img:hover { filter: grayscale(0%); transform: translateY(-5px); }
 
-    #rsvp { background-color: var(--soft-gray); }
-    .rsvp-form { 
-      max-width: 500px; margin: auto; background: white; 
-      padding: 40px; border-top: 5px solid var(--dusty-blue);
-    }
-    input, select, textarea { 
-      width: 100%; padding: 12px; margin: 10px 0; 
-      border: 1px solid #ddd; background: #fafafa;
-    }
-    .submit-btn { 
-      background: var(--dusty-blue); color: white; border: none; 
-      padding: 15px 30px; cursor: pointer; width: 100%; 
-      font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;
-      transition: 0.3s;
-    }
-    .submit-btn:hover { background: var(--slate-blue); }
+        /* RSVP Form */
+        #rsvp { background-color: var(--soft-gray); }
+        .rsvp-form { 
+            max-width: 500px; margin: auto; background: white; 
+            padding: 40px; border-top: 5px solid var(--dusty-blue);
+        }
+        input, select, textarea { 
+            width: 100%; padding: 12px; margin: 10px 0; 
+            border: 1px solid #ddd; background: #fafafa;
+        }
+        .submit-btn { 
+            background: var(--dusty-blue); color: white; border: none; 
+            padding: 15px 30px; cursor: pointer; width: 100%; 
+            font-size: 1rem; text-transform: uppercase; letter-spacing: 2px;
+            transition: 0.3s;
+        }
+        .submit-btn:hover { background: var(--slate-blue); }
 
-    footer { padding: 50px; background: white; text-align: center; color: var(--slate-blue); }
-  </style>
+        footer { padding: 50px; background: white; text-align: center; color: var(--slate-blue); }
+    </style>
 </head>
 <body>
 
-  <!-- Background Music (hidden player) -->
-  <audio id="bg-music" autoplay loop hidden>
-    <source src="music/palagi.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+<audio controls autoplay loop>
+  <source src="music/palagi.mp3" type="audio/mpeg">
+</audio>
 
-  <header>
-    <p class="hero-sub">Save the Date</p>
-    <h1>Jesseca & Joshua</h1>
-    <p>May 28, 2027 • Casa El Trinidad, Brgy. Sampaguita, Lipa City, Batangas</p>
-    <div id="countdown">Calculating...</div>
-  </header>
+    <header>
+        <p class="hero-sub">Save the Date</p>
+        <h1>Jesseca & Joshua</h1>
+        <p>May 28, 2027 • Casa El Trinidad, Brgy. Sampaguita, Lipa City, Batangas</p>
+        <div id="countdown">Calculating...</div>
+    </header>
 
-  <!-- Other sections (story, video, gallery, RSVP) remain unchanged -->
+    <section id="story">
+        <h2>Our Love Story</h2>
+        <div class="story-text">
+            <p>It began with a simple "hello" and grew into a lifetime of memories. From our first hike in the blue ridge mountains to our quiet Sundays at home, every moment has led us here.</p>
+            <p>We are so excited to begin our next chapter with you by our side.</p>
+        </div>
+    </section>
 
-  <footer>
-    <p>#LoveInDustyBlue</p>
-    <p style="font-size: 0.8rem; margin-top: 10px;">Designed with love for Jesseca & Joshua</p>
-  </footer>
+    <section id="video">
+        <h2>A Glimpse of Us</h2>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
 
-  <script>
-    // RSVP form submission
-    document.getElementById("rsvpForm").addEventListener("submit", function(e){
-      e.preventDefault();
-      fetch("https://script.google.com/macros/s/AKfycbwGTMZaon_snKJVojtPkiTu4zJgonn-MzQyLXXCjcxMFGr72kCYzPP0ItC5goRQl-st/exec", {
-        method: "POST",
-        body: JSON.stringify({
-          name: e.target.name.value,
-          attendance: e.target.attendance.value,
-          notes: e.target.notes.value
-        })
-      })
-      .then(res => alert("Thank you! Your RSVP has been recorded."))
-      .catch(err => alert("Oops! Something went wrong."));
-    });
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1510076857177-7470076d4098?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+            <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+            <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+			 <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+			  <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+			   <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+			    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+				 <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+				  <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+				   <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=500&q=60" alt="Engagement Photo">
+				    
+        </div>
+    </section>
 
-    // Countdown
-    const weddingDate = new Date("May 28, 2027 16:00:00").getTime();
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = weddingDate - now;
+   <section id="rsvp">
+    <h2>Kindly Respond</h2>
+    <div class="rsvp-form">
+        <form id="rsvpForm">
+            <input type="text" name="name" placeholder="Full Name(s)" required>
+            <select name="attendance" required>
+                
+                <option value="yes">Happily Accept</option>
+                <option value="no">Regretfully Decline</option>
+            </select>
+            <textarea name="notes" placeholder="Notes"></textarea>
+            <button type="submit" class="submit-btn">Send RSVP</button>
+        </form>
+    </div>
+</section>
 
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const s = Math.floor((diff % (1000 * 60)) / 1000);
+<script>
+document.getElementById("rsvpForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  fetch("https://script.google.com/macros/s/AKfycbwGTMZaon_snKJVojtPkiTu4zJgonn-MzQyLXXCjcxMFGr72kCYzPP0ItC5goRQl-st/exec", {
+    method: "POST",
+    body: JSON.stringify({
+      name: e.target.name.value,
+      attendance: e.target.attendance.value,
+      notes: e.target.notes.value
+    })
+  })
+  .then(res => alert("Thank you! Your RSVP has been recorded."))
+  .catch(err => alert("Oops! Something went wrong."));
+});
+</script>
 
-      document.getElementById("countdown").innerHTML = 
-        d + " Days : " + h + " Hours : " + m + " Mins : " + s + " Secs";
 
-      if (diff < 0) {
-        document.getElementById("countdown").innerHTML = "The Celebration Has Begun!";
-      }
-    }
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
+    <footer>
+        <p>#LoveInDustyBlue</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Designed with love for Jesseca & Joshua</p>
+    </footer>
 
-    // Autoplay fix: start music after first click if blocked
-    document.addEventListener("click", function() {
-      var audio = document.getElementById("bg-music");
-      if (audio.paused) {
-        audio.play();
-      }
-    }, {once:true});
-  </script>
+    <script>
+        // Set Wedding Date (Year, Month [0-11], Day, Hour, Minute)
+        const weddingDate = new Date("May 28, 2027 16:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = 
+                d + " Days : " + h + " Hours : " + m + " Mins : " + s + " Secs";
+
+            if (diff < 0) {
+                document.getElementById("countdown").innerHTML = "The Celebration Has Begun!";
+            }
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
